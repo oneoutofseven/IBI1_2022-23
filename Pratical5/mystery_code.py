@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:
+# Answer: pick the largest number after randomly selecting 10 numbers(the ceiling of each number) between 1 and 100.
 
 # Import libraries
 # randint allows drawing a random number,
