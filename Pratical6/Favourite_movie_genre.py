@@ -8,8 +8,8 @@ requested_genre = "Comedy"
 
 print ("The number of students who prefer", requested_genre, "is :",tinydict[requested_genre])
 
-labels=["Comedy","Action","Romance","Fantasy","Science-fiction","Horror","Crime","Documentary","History","War"] #genre
-y = np.array ([73,42,38,28,22,19,18,12,8,7]) #the data
+labels=tinydict.keys() #genre
+y = tinydict.values() #the data
 
 plt.pie(y,labels=labels,autopct="%d%%")
 plt.title("Favourite movie genre") #title of the chart
