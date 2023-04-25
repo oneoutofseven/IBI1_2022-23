@@ -1,0 +1,10 @@
+blosum matrix score of human with mouse is 3579
+blosum matrix score of human with cat is 3717
+blosum matrix score of cat with mouse is 3592
+
+identity percentage of human with mouse is 82.111801%
+identity percentage of human with cat is 85.217391%
+identity percentage of cat with mouse is 81.739130%
+
+human and cat species sequences are most closely related.
+human and cat began to evolve in different directions even later and the higher similarity of human and cat in biological structure 
