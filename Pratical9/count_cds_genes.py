@@ -4,30 +4,31 @@ if stop_codons == 'TAA':
 elif stop_codons == 'TAG':
     file = open('TAG_stop_genes.fa', 'w')
 elif stop_codons == 'TGA':
-    file = open('TAG_stop_genes.fa', 'w')
-f = open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa')
-ls1 = []
-ls2 = []
+    file = open('TGA_stop_genes.fa', 'w')
+
+F = open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa')
+list1 = [] #for all names
+list2 = [] #for stop codon names
 seq1 = {}
-for line in f:
+for line in F:
     if line.startswith('>'):
         name = line.replace('_mRNA', '').split()[0]
         seq1[name] = ''
-        ls1.append(line.replace('_mRNA', '').split()[0])
+        list1.append(line.replace('_mRNA', '').split()[0])
     else:
         seq1[name] += line.replace('\n', '').strip()
 
-for i in range(len(ls1)):
-    if seq1[ls1[i]][-3:] == stop_codons:
-        ls2.append(ls1[i])
-for i in range(len(ls2)):
+for i in range(len(list1)):
+    if seq1[list1[i]][-3:] == stop_codons:
+        list2.append(list1[i])
+for i in range(len(list2)):
     num = 0
-    lenth = len(seq1[ls2[i]])
-    for e in range(3, lenth - 2, 1):
-        if seq1[ls2[i]][e:e + 3] == stop_codons:
+    lenth = len(seq1[list2[i]])
+    for a in range(3, lenth - 2):
+        if seq1[list2[i]][a:a + 3] == stop_codons:
             num = num + 1
-    line1 = ls2[i] + "___"+"num:"+str(num)
-    line2 = seq1[ls2[i]]
+    line1 = list2[i] + "___"+"num:"+str(num)
+    line2 = seq1[list2[i]]
     file.write('\n'+line1+'\n'+line2)
 
 if stop_codons == 'TAA':
@@ -35,6 +36,6 @@ if stop_codons == 'TAA':
 elif stop_codons == 'TAG':
     x = open('TAG_stop_genes.fa')
 elif stop_codons == 'TGA':
-    x = open('TAG_stop_genes.fa')
+    x = open('TGA_stop_genes.fa')
 
-f.close()
+F.close()
