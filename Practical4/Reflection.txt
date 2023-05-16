@@ -1,0 +1,2 @@
+The pratical really helps me understand the way how git and github work. 
+I strongly believe that the experience and knowledge gained from this pratical can be useful in the future.
