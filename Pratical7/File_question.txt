@@ -1,5 +1,5 @@
 Q:How have new cases and total cases developed over time in Germany？
 
-Line:51-68
+Line:53-69
 
 Discussion: Before March 5, there were few new and total cases and the growth rate was slow, but afterwards there was an explosive growth with an overall J-shaped
