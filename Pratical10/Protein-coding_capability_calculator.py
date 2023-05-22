@@ -2,7 +2,7 @@ import re
 
 def calculate(DNA):
   dna_arrange=DNA.upper() #make the DNA all upper case
-  seq1 = re.findall('ATG[ATCG]*TGA',dna_arrange)
+  seq1 = re.findall('ATG([ATCG]*)TGA',dna_arrange)
   seq=''.join(seq1)
   percentage= len(seq)/len(DNA)
   if percentage > 0.5:
@@ -13,7 +13,7 @@ def calculate(DNA):
     print("it is unclear")
   return percentage
 
-DNA="atgtcaTatcAtGgcatgtcagtcagttga"
+DNA="atgtcaTatcAttgcatgtcagtcagttga"
 calculate(DNA)
 
 
