@@ -1,10 +1,7 @@
 F = open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa')
-# ls1 is to record names of all the genes.
-# ls2 is to record names of TGA_genes.
-# seq1 is to combine the name and sequence
-list1 = []
-list2 = []
-seq1 = {}
+list1 = [] # for names of all the genes
+list2 = [] # for names of TGA_genes
+seq1 = {} # for combine the name and sequence
 for line in F:
     if line.startswith('>'):
         name = line.replace('_mRNA', '').split()[0]
